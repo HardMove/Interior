@@ -1,0 +1,26 @@
+.header {
+   display: none;
+   padding: 30px;
+   position: absolute;
+   width: 100%;
+   z-index: 3;
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .nav {
+      margin-left: -5%;
+      &__list {
+         display: flex;
+         align-self: center;
+         gap: 60px;
+      }
+
+      &__link {
+         font-size: 18px;
+         color: #ffffff;
+      }
+   }
+}
