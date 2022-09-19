@@ -5,6 +5,10 @@
       height: 100vh;
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
          url(/img/image_4.png) no-repeat center / cover;
+
+      @include small-tablet {
+         padding: 120px 0 0 0;
+      }
    }
 
    &__content {
@@ -21,6 +25,13 @@
       font-size: 48px;
       line-height: 72px;
       margin-bottom: 40px;
+
+      @include mobile {
+         font-weight: 500;
+         font-size: 40px;
+         line-height: 48px;
+         margin-bottom: 25px;
+      }
    }
 
    &__text {
@@ -28,6 +39,10 @@
       font-size: 18px;
       line-height: 200%;
       margin-bottom: 40px;
+
+      @include mobile {
+         line-height: 170%;
+      }
    }
 
    &__search {
@@ -41,6 +56,11 @@
 
       &::placeholder {
          color: #fff;
+      }
+
+      @include mobile {
+         width: auto;
+         padding-right: 40px;
       }
    }
 }
