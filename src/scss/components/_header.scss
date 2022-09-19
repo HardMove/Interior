@@ -1,6 +1,5 @@
 .header {
-   display: none;
-   padding: 30px;
+   margin-top: 30px;
    position: absolute;
    width: 100%;
    z-index: 3;
@@ -10,17 +9,186 @@
       justify-content: space-between;
    }
 
+   &__logo {
+      z-index: 10;
+   }
+
    .nav {
-      margin-left: -5%;
       &__list {
          display: flex;
-         align-self: center;
+         align-items: center;
          gap: 60px;
+
+         position: absolute;
+         left: 50%;
+         transform: translate(-50%, -50%);
+
+         @include tablet {
+            transform: translate(-50%, 0);
+         }
       }
 
       &__link {
-         font-size: 18px;
+         font-size: 20px;
          color: #ffffff;
+         position: relative;
+         &_arrow {
+            display: flex;
+            gap: 5px;
+            img {
+               width: 15px;
+               margin-bottom: -3px;
+            }
+         }
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            border-radius: 100px;
+            left: 0;
+            background-color: #fff;
+            transition: transform 0.3s ease-out;
+         }
+
+         &:hover::after {
+            transform: scaleX(1);
+         }
+
+         @include tablet {
+            font-size: 35px;
+            &:hover:after {
+               transform: scaleX(0);
+            }
+         }
+      }
+
+      &__arrow {
+         transition: all 0.3s;
+         &.active {
+            transform: rotate(-180deg);
+         }
+      }
+
+      .submenu {
+         position: absolute;
+         visibility: hidden;
+         max-width: fit-content;
+         opacity: 0;
+         z-index: -1;
+         margin-top: 10px;
+         margin-left: -3%;
+         transform: translateY(-3em);
+         background-color: rgba(0, 0, 0, 0.95);
+         border: 1px solid #ffffff;
+         border-radius: 20px;
+         transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+
+         &__item {
+            padding: 15px 10px;
+         }
+
+         &__link {
+            color: #ffffff;
+            font-size: 20px;
+
+            @include tablet {
+               font-size: 24px;
+            }
+         }
+
+         &.open {
+            visibility: visible;
+            opacity: 1;
+            z-index: 1;
+            transform: translateY(0);
+            transition-delay: 0s, 0s, 0s;
+         }
+      }
+
+      @include tablet {
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         padding: 100px 0 0 30px;
+         transition: all 0.3s ease 0s;
+         overflow: auto;
+         background-color: #000;
+
+         &.active {
+            top: 0;
+            margin: 0;
+         }
+
+         &__list {
+            flex-direction: column;
+         }
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      align-items: center;
+      z-index: 10;
+      .bag {
+         img {
+            width: 35px;
+            height: 35px;
+         }
+      }
+
+      .burger {
+         display: none;
+         position: relative;
+         width: 50px;
+         height: 50px;
+         margin-top: -5px;
+         &__line {
+            &::before,
+            &::after,
+            & {
+               content: "";
+               position: absolute;
+               margin-left: -15px;
+               width: 30px;
+               height: 3px;
+               border-radius: 30px;
+               background-color: #fff;
+               transition: all 0.3s ease;
+            }
+
+            &::before {
+               transform: translateY(-9px);
+            }
+
+            &::after {
+               transform: translateY(9px);
+            }
+         }
+
+         &.active {
+            .burger__line {
+               transform: translateX(-50px);
+               background-color: transparent;
+
+               &::before {
+                  transform: rotate(45deg) translate(35px, -35px);
+               }
+
+               &::after {
+                  transform: rotate(-45deg) translate(35px, 35px);
+               }
+            }
+         }
+
+         @include tablet {
+            display: inline-block;
+         }
       }
    }
 }
