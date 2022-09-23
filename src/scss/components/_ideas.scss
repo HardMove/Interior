@@ -1,6 +1,5 @@
 .ideas {
    margin-bottom: 170px;
-
    @include mobile {
       margin-bottom: 100px;
    }
@@ -18,9 +17,6 @@
       @include mobile {
          gap: 30px;
       }
-   }
-
-   &__content {
    }
 
    &__title {
@@ -67,9 +63,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-   }
-
-   &__title {
    }
 
    &__icon {
