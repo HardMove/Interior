@@ -1,4 +1,9 @@
 .ideas {
+   margin-bottom: 170px;
+
+   @include mobile {
+      margin-bottom: 100px;
+   }
    &__container {
       display: flex;
       align-items: flex-start;
