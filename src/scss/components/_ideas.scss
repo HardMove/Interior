@@ -3,6 +3,16 @@
       display: flex;
       align-items: flex-start;
       gap: 85px;
+
+      @include big-desktop {
+         flex-wrap: wrap-reverse;
+         justify-content: center;
+         max-width: 930px;
+      }
+
+      @include mobile {
+         gap: 30px;
+      }
    }
 
    &__content {
@@ -10,14 +20,26 @@
 
    &__title {
       margin-bottom: 40px;
+      @include mobile {
+         margin-bottom: 10px;
+         font-size: 26px;
+         font-weight: 400;
+      }
    }
 
    &__text {
       margin-bottom: 30px;
+      @include mobile {
+         line-height: 170%;
+         font-size: 16px;
+      }
    }
 
    &__img {
       border-radius: 60px 60px 0 60px;
+      @include big-desktop {
+         border-radius: 35px 35px 0 35px;
+      }
    }
 }
 
@@ -83,5 +105,10 @@
       padding: 0;
       transition: all 0.3s ease-out;
       box-sizing: content-box;
+
+      @include mobile {
+         line-height: 170%;
+         font-size: 16px;
+      }
    }
 }
