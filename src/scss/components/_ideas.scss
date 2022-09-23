@@ -1,0 +1,87 @@
+.ideas {
+   &__container {
+      display: flex;
+      align-items: flex-start;
+      gap: 85px;
+   }
+
+   &__content {
+   }
+
+   &__title {
+      margin-bottom: 40px;
+   }
+
+   &__text {
+      margin-bottom: 30px;
+   }
+
+   &__img {
+      border-radius: 60px 60px 0 60px;
+   }
+}
+
+.accordion-item {
+   margin-bottom: 20px;
+
+   &.open {
+      .accordion-item__icon {
+         &::after {
+            top: 25%;
+            left: 49%;
+            transform: rotate(90deg);
+            transition: all 0.3s ease-out;
+         }
+      }
+   }
+
+   &__control {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__title {
+   }
+
+   &__icon {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         width: 50%;
+         height: 2px;
+         background-color: var(--pink-color);
+         transform: translate(-50%, -50%);
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         width: 2px;
+         height: 50%;
+         background-color: var(--pink-color);
+         transform: translate(-50%, -50%);
+         transition: all 0.3s ease-out;
+      }
+   }
+
+   &__content {
+      font-weight: 300;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      transition: all 0.3s ease-out;
+      box-sizing: content-box;
+   }
+}
