@@ -1,6 +1,10 @@
 .product {
    margin-bottom: 200px;
 
+   @include small-tablet {
+      margin-bottom: 100px;
+   }
+
    &__title {
       text-align: center;
       margin-bottom: 65px;

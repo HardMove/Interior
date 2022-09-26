@@ -35,3 +35,9 @@
     @content;
   }
 }
+
+@mixin small-mobile {
+  @media (max-width: (426px)) {
+    @content;
+  }
+}
