@@ -1,6 +1,16 @@
 .reviews {
    background: linear-gradient(279.85deg, #ffffff 0%, #faf5f2 100%);
    padding: 100px 0 30px 0;
+   margin-bottom: 170px;
+
+   @include tablet {
+      margin-bottom: 95px;
+   }
+
+   @include mobile {
+      margin-bottom: 60px;
+   }
+
    &__container {
       cursor: default;
       user-select: none;
