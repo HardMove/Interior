@@ -1,6 +1,10 @@
 .ideas {
    margin-bottom: 170px;
-   @include mobile {
+
+   @include tablet {
+      margin-bottom: 130px;
+   }
+   @include small-tablet {
       margin-bottom: 100px;
    }
    &__container {
@@ -72,11 +76,10 @@
 
 .accordion-item {
    margin-bottom: 20px;
-
    &.open {
       .accordion-item__icon {
          &::after {
-            top: 25%;
+            top: 24%;
             left: 49%;
             transform: rotate(90deg);
             transition: all 0.3s ease-out;

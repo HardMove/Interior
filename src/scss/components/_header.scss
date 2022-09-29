@@ -17,12 +17,10 @@
       &__list {
          display: flex;
          align-items: center;
-         gap: 60px;
-
          position: absolute;
+         gap: 60px;
          left: 50%;
          transform: translate(-50%, -50%);
-
          @include tablet {
             transform: translate(-50%, 0);
          }
@@ -79,12 +77,13 @@
          max-width: fit-content;
          opacity: 0;
          z-index: -1;
+         padding: 5px;
          margin-top: 10px;
-         margin-left: -3%;
+         margin-left: -2%;
          transform: translateY(-3em);
          background-color: rgba(0, 0, 0, 0.95);
          border: 1px solid #ffffff;
-         border-radius: 10px;
+         border-radius: 20px;
          transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
          &__item {
@@ -93,7 +92,7 @@
 
          &__link {
             color: #ffffff;
-            font-size: 20px;
+            font-size: 17px;
             position: relative;
             @include tablet {
                font-size: 24px;

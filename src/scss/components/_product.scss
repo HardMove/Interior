@@ -1,7 +1,6 @@
 .product {
    margin-bottom: 200px;
-
-   @include small-tablet {
+   @include tablet {
       margin-bottom: 100px;
    }
 
