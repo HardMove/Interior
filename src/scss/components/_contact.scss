@@ -1,5 +1,13 @@
 .contact {
    margin-bottom: 200px;
+
+   @include tablet {
+      margin-bottom: 150px;
+   }
+
+   @include small-tablet {
+      margin-bottom: 100px;
+   }
    &__container {
       display: flex;
       gap: 65px;

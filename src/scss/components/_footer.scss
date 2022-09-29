@@ -1,0 +1,45 @@
+.footer {
+   background: linear-gradient(275.58deg, #000000 0%, #4b4b4b 100%);
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 70px;
+
+      @include tablet {
+         display: block;
+         padding-bottom: 1px;
+      }
+   }
+
+   &__logo {
+      align-self: flex-start;
+      margin-bottom: 40px;
+   }
+
+   &__item {
+   }
+
+   &__title {
+      font-weight: 500;
+      font-size: 24px;
+      color: #fadcd9;
+      margin-bottom: 30px;
+   }
+
+   &__link {
+      font-size: 18px;
+      color: #ffffff;
+      display: block;
+
+      &:not(:last-child) {
+         margin-bottom: 26px;
+      }
+
+      @include tablet {
+         &:last-child {
+            margin-bottom: 70px;
+         }
+      }
+   }
+}
