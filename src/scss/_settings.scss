@@ -14,11 +14,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-.page__body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-size: 16px;
+body.fixed {
+  position: fixed;
 }
 
 img {

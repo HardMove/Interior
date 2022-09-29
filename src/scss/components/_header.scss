@@ -94,9 +94,32 @@
          &__link {
             color: #ffffff;
             font-size: 20px;
-
+            position: relative;
             @include tablet {
                font-size: 24px;
+            }
+
+            &::after {
+               content: "";
+               position: absolute;
+               width: 100%;
+               transform: scaleX(0);
+               height: 2px;
+               bottom: -4px;
+               border-radius: 100px;
+               left: 0;
+               background-color: #fff;
+               transition: transform 0.3s ease-out;
+            }
+
+            &:hover::after {
+               transform: scaleX(1);
+            }
+
+            @include tablet {
+               &:hover:after {
+                  transform: scaleX(0);
+               }
             }
          }
 

@@ -42,6 +42,32 @@
          border-radius: 35px 35px 0 35px;
       }
    }
+
+   &__btn {
+      position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         transform: scaleX(0);
+         height: 2px;
+         bottom: -2px;
+         border-radius: 100px;
+         left: 0;
+         background-color: var(--pink-color);
+         transition: transform 0.3s ease-out;
+      }
+
+      &:hover::after {
+         transform: scaleX(1);
+      }
+
+      @include tablet {
+         &:hover:after {
+            transform: scaleX(0);
+         }
+      }
+   }
 }
 
 .accordion-item {
