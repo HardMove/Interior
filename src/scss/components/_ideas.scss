@@ -1,6 +1,5 @@
 .ideas {
    margin-bottom: 170px;
-
    @include tablet {
       margin-bottom: 130px;
    }
@@ -11,7 +10,6 @@
       display: flex;
       align-items: flex-start;
       gap: 85px;
-
       @include big-desktop {
          flex-wrap: wrap-reverse;
          justify-content: center;

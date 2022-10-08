@@ -7,7 +7,6 @@
    &__title {
       text-align: center;
       margin-bottom: 65px;
-
       @include mobile {
          margin-bottom: 25px;
          font-weight: 400;
